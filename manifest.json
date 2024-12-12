@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Akıllı Eksper",
+  "description": "Araç detay sayfasında chatbot ile interaktif araç değerlendirme ve fiyat geçmişi görüntüleme.",
+  "version": "2.5", 
+ "permissions": [],
+  "host_permissions": ["https://*.sahibinden.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://*.sahibinden.com/*"],
+      "js": ["carListing.js","carDetail.js"]
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  
+  "short_name": "Eksper",
+  "author": "Selman-s",
+  "homepage_url": "https://github.com/Selman-S/AI_Sahibinden_Expertise",
+  "minimum_chrome_version": "93",
+  "web_accessible_resources": [
+    {
+      "resources": ["icons/*"],
+      "matches": ["https://*.sahibinden.com/*"]
+    }
+  ]
+}
